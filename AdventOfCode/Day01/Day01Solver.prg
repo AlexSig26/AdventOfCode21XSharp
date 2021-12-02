@@ -11,11 +11,12 @@ class Day01Solver inherit SolverBase
     protected override method Parse(data as List<string>) as void
         // Parse the List of strings into the _Data field
         _Data := List<int>{}
-        for var i := 0 upto data:Count - 1
+        _Data := data.Select({x => Convert:ToInt32(x)}):ToList()
+        /*for var i := 0 upto data:Count - 1
             var x = Int32:Parse(data[i])
             
             _Data:Add(x)
-        next
+        next*/
         
         return
     
