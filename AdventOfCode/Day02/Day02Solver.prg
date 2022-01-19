@@ -10,6 +10,7 @@ class Day02Solver inherit SolverBase
     
     protected override method Parse(data as List<string>) as void
         // Parse the List of strings into the _Data field
+        
         _Data := data 
         return
     
@@ -18,7 +19,7 @@ class Day02Solver inherit SolverBase
         var horiz:=0
         for var i := 0 upto _Data:Count - 1
             //var data[i]:Split(" ")
-            var values := _Data[i]:Split(c" ")
+            var values := _Data[i]:Split(' ')
             var key := values[1]
 			var val := Int32:Parse(values[2])
             
